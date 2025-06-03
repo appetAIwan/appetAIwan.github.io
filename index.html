@@ -1,229 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>appetAIwan - AI Smart Meal Recommender</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>appetAIwan - AI Smart Meal Recommender</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #fffaf4;
-      color: #333;
-    }
+  <body>
+    <div class="bg-decoration"></div>
+    <div class="bg-decoration"></div>
 
-    header {
-      background-color: #f57c00;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
+    <nav>
+      <div class="nav-logo">🍽️ appetAIwan</div>
+      <div class="nav-links">
+        <a href="#background">Background</a>
+        <a href="#users">Users</a>
+        <a href="#analysis">Analysis</a>
+        <a href="#swot">SWOT</a>
+        <a href="#pdfs">Reports</a>
+        <a href="#demo">Demo</a>
+        <a href="#team">Developers</a>
+      </div>
+    </nav>
 
-    header img.logo {
-      width: 80px;
-      vertical-align: middle;
-      margin-right: 1rem;
-      background-color: #f57c00;
-      padding: 4px;
-      border-radius: 8px;
-    }
+    <header>
+      <div class="logo-container">
+        <span>🍽️</span>
+      </div>
+      <h1>appetAIwan Smart Meal Recommendation System</h1>
+      <p>APPETITE + AI + TAIWAN = Personalized Meal Suggestions for You</p>
+    </header>
 
-    header h1 {
-      display: inline;
-      font-size: 2rem;
-      vertical-align: middle;
-    }
+    <section id="background" class="container section-highlight">
+      <h2>📌 Product Background</h2>
+      <p class="intro-text">
+        It's hard to understand nutrition info when eating out. Most recipe
+        platforms lack personalized health-based suggestions.
+        <strong>appetAIwan</strong> integrates AI technology with a LINE bot to
+        recommend meals based on your health profile.
+      </p>
+      <div class="screenshot-placeholder">
+        <img src="assets\img\Appetaiwan.png" alt="描述文字" />
+      </div>
+    </section>
 
-    section {
-      padding: 3rem 1rem;
-      border-bottom: 1px solid #eee;
-    }
+    <section id="users" class="container section-highlight">
+      <h2>👤 User Stories</h2>
+      <div class="grid grid-2">
+        <div class="user-card">
+          <h3 class="user-title">Mary (Age 55, Hypertension)</h3>
+          <p class="user-description">
+            She wants to manage her condition through food instead of
+            medication. After selecting "Hypertension," the system filters and
+            recommends simple, easy-to-follow recipes.
+          </p>
+          <div class="image-placeholder">
+            <img src="assets\img\Mary.png" alt="描述文字" />
+          </div>
+        </div>
+        <div class="user-card">
+          <h3 class="user-title">Ben (Age 30, Office Worker)</h3>
+          <p class="user-description">
+            Looking for quick, weight-loss-friendly recipes. After work, he uses
+            the LINE Bot to enter his goals and receives tailored recipe
+            recommendations with nutritional info.
+          </p>
+          <div class="image-placeholder">
+            <img src="assets\img\Ben.png" alt="描述文字" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-    }
+    <section id="analysis" class="container section-highlight">
+      <h2>📊 STP & 4P Analysis</h2>
+      <div class="analysis-content">
+        <p class="analysis-text">
+          <strong class="analysis-label">🎯 Positioning:</strong> LINE users
+          aiming for weight or blood pressure control, who cook at home
+          regularly or occasionally.<br />
+          <strong class="analysis-label">💰 Price:</strong> Basic features are
+          free; premium features use a feature-unlock model.<br />
+          <strong class="analysis-label">📢 Promotion:</strong> Social media
+          campaigns, KOL & nutritionist collaborations, QR codes at
+          clinics/gyms/markets.<br />
+          <strong class="analysis-label">📍 Place:</strong> Primarily via LINE
+          Bot; website access under development.
+        </p>
+      </div>
+    </section>
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
+    <section id="swot" class="container section-highlight">
+      <h2>🔍 Business Model & SWOT</h2>
+      <div class="swot-content">
+        <p class="swot-text">
+          <strong class="swot-strength">💪 Strengths:</strong> Uses LLM + RAG
+          for intelligent recommendations; no app installation needed.<br />
+          <strong class="swot-weakness">⚠️ Weaknesses:</strong> Users may not
+          fully trust AI recommendations.<br />
+          <strong class="swot-opportunity">🚀 Opportunities:</strong> Growing
+          health-focused food market; potential for cross-industry
+          partnerships.<br />
+          <strong class="swot-threat">⚡ Threats:</strong> Easy to replicate;
+          existing large health platforms present competition.
+        </p>
+      </div>
+    </section>
 
-    @media (min-width: 768px) {
-      .grid-2 {
-        grid-template-columns: 1fr 1fr;
+    <section id="pdfs" class="container">
+      <div class="pdf-showcase">
+        <h2 class="pdf-title">📑 Project Documentation</h2>
+        <p class="pdf-subtitle">
+          Explore our comprehensive project reports and technical documentation
+        </p>
+
+        <!-- PDF Viewer Tabs -->
+        <div class="pdf-tabs">
+          <button class="pdf-tab active" onclick="showPDF('finalreport')">
+            📄 Final Report
+          </button>
+          <button class="pdf-tab" onclick="showPDF('architecture')">
+            🏗️ Technical Architecture
+          </button>
+          <!-- <button class="pdf-tab" onclick="showPDF('demo')">
+            🎯 Demo & Features
+          </button> -->
+        </div>
+
+        <!-- PDF Viewer Container -->
+        <div class="pdf-viewer-container">
+          <!-- Midterm Report PDF -->
+          <div id="finalreport-pdf" class="pdf-viewer active">
+            <div class="pdf-header">
+              <h3>📄 Final Report</h3>
+              <div class="pdf-controls">
+                <span class="pdf-info">📄 33 pages • 📅 April 16, 2025</span>
+                <a href="#" class="download-btn-small">📥 Download</a>
+              </div>
+            </div>
+            <div class="pdf-content">
+              <iframe
+                src="assets/files/finalreport.pdf"
+                width="100%"
+                height="600"
+                frameborder="0"
+              >
+                <p>
+                  Your browser does not support PDFs.
+                  <a href="assets/files/finalreport.pdf">Download the PDF</a>.
+                </p>
+              </iframe>
+            </div>
+          </div>
+
+          <div id="architecture-pdf" class="pdf-viewer">
+            <div class="pdf-header">
+              <h3>🏗️ Technical Architecture</h3>
+              <div class="pdf-controls">
+                <span class="pdf-info">🔧 System Design • 🏗️ Architecture</span>
+                <a href="#" class="download-btn-small">📥 Download Docs</a>
+              </div>
+            </div>
+            <div class="pdf-content">
+              <div class="architecture-content">
+                <h4>📊 System Architecture Overview</h4>
+                <p>
+                  Our technical architecture demonstrates the integration of AI
+                  technologies with LINE Bot platform.
+                </p>
+
+                <div class="arch-image-container">
+                  <div class="image-placeholder arch-image">
+                    <img
+                      src="assets\img\software_architecture.png"
+                      alt="Software Architecture"
+                    />
+                  </div>
+                  <p class="image-caption">
+                    Complete system workflow showing LINE Platform integration
+                    with Cloud Infrastructure, from user message to AI-powered
+                    response via RAG Engine and TDEE Module.
+                  </p>
+                </div>
+
+                <div class="tech-highlights">
+                  <h5>🚀 Key Technologies</h5>
+                  <div class="tech-grid">
+                    <div class="tech-item">
+                      <span class="tech-icon">🤖</span>
+                      <strong>RAG Engine</strong>
+                      <p>
+                        Retrieval-Augmented Generation for accurate recipe
+                        recommendations
+                      </p>
+                    </div>
+                    <div class="tech-item">
+                      <span class="tech-icon">💬</span>
+                      <strong>LINE Bot API</strong>
+                      <p>
+                        Seamless integration with popular messaging platform
+                      </p>
+                    </div>
+                    <div class="tech-item">
+                      <span class="tech-icon">☁️</span>
+                      <strong>Cloud Infrastructure</strong>
+                      <p>Scalable deployment with Flask and Firebase</p>
+                    </div>
+                    <div class="tech-item">
+                      <span class="tech-icon">🧠</span>
+                      <strong>OpenAI Integration</strong>
+                      <p>Advanced language model for natural conversations</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo & Features
+          <div id="demo-pdf" class="pdf-viewer">
+            <div class="pdf-header">
+              <h3>🎯 Demo & Features</h3>
+              <div class="pdf-controls">
+                <span class="pdf-info">🎮 Live Demo • ✨ Features</span>
+                <a
+                  href="https://appetaiwan.github.io/"
+                  class="download-btn-small"
+                  target="_blank"
+                  >🌐 Visit Site</a
+                >
+              </div>
+            </div>
+            <div class="pdf-content">
+              <div class="demo-content">
+                <h4>🚀 Interactive Demo</h4>
+                <p>
+                  Experience our appetAIwan system with the following features:
+                </p>
+                <ul class="feature-list">
+                  <li>
+                    📊 <strong>TDEE Calculation:</strong> Calculate daily
+                    calorie requirements
+                  </li>
+                  <li>
+                    🍽️ <strong>Recipe Queries:</strong> Smart recipe
+                    recommendations
+                  </li>
+                  <li>
+                    🥗 <strong>Food Calorie Queries:</strong> Nutritional
+                    content analysis
+                  </li>
+                  <li>
+                    🎯
+                    <strong>Personalized Meal Recommendations:</strong>
+                    Customized dietary advice
+                  </li>
+                </ul>
+                <div class="demo-iframe">
+                  <iframe
+                    src="https://appetaiwan.github.io/"
+                    width="100%"
+                    height="400"
+                    frameborder="0"
+                  >
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function showPDF(pdfType) {
+        // Hide all PDF viewers
+        const viewers = document.querySelectorAll(".pdf-viewer");
+        viewers.forEach((viewer) => viewer.classList.remove("active"));
+
+        // Remove active class from all tabs
+        const tabs = document.querySelectorAll(".pdf-tab");
+        tabs.forEach((tab) => tab.classList.remove("active"));
+
+        // Show selected PDF viewer
+        document.getElementById(pdfType + "-pdf").classList.add("active");
+
+        // Add active class to clicked tab
+        event.target.classList.add("active");
       }
-    }
 
-    .photo-placeholder {
-      background-color: #ffe0b2;
-      border: 2px dashed #ffb74d;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-top: 1rem;
-    }
-
-    .team-card {
-      background-color: #fff3e0;
-      border: 1px solid #ffcc80;
-      border-radius: 8px;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    footer {
-      background-color: #f57c00;
-      color: #fff;
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-    }
-    .section-highlight {
-    background-color: #fff3e0;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-    padding: 3rem 1.5rem;
-    margin-top: 2rem;
+      function showQRCode() {
+  console.log("showQRCode function called");
+  const modal = document.getElementById("qrModal");
+  if (modal) {
+    modal.style.display = "flex";
+    // document.body.style.overflow = "hidden";  // ← 註釋或刪除
+    console.log("Modal should be visible now");
+  } else {
+    console.error("QR Modal not found");
   }
+}
 
-  .section-highlight h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.6rem;
-    position: relative;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
+function closeQRCode() {
+  console.log("closeQRCode function called");
+  const modal = document.getElementById("qrModal");
+  if (modal) {
+    modal.style.display = "none";
+    // document.body.style.overflow = "auto";  // ← 註釋或刪除
   }
+}
 
-  .section-highlight h2::before,
-  .section-highlight h2::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: #aaa;
-    margin: 0 1rem;
-    position: relative;
-    top: -1px;
-  }
-  </style>
-</head>
+      function closeQRCode() {
+        console.log("closeQRCode function called");
+        const modal = document.getElementById("qrModal");
+        if (modal) {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
+        }
+      }
 
-<body>
-  <nav style="background-color: #fff; border-bottom: 1px solid #ddd; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000;">
-    <div style="font-weight: bold; color: #f57c00; font-size: 1.2rem;">🍽️ appetAIwan</div>
-    <div>
-      <a href="#background" style="margin: 0 1rem; text-decoration: none; color: #333; font-weight: bold;">Background</a>
-      <a href="#users" style="margin: 0 1rem; text-decoration: none; color: #333; font-weight: bold;">Users</a>
-      <a href="#analysis" style="margin: 0 1rem; text-decoration: none; color: #333; font-weight: bold;">Analysis</a>
-      <a href="#swot" style="margin: 0 1rem; text-decoration: none; color: #333; font-weight: bold;">SWOT</a>
-      <a href="#downloads" style="margin: 0 1rem; text-decoration: none; color: #333; font-weight: bold;">Files</a>
-      <a href="#team" style="margin: 0 1rem; text-decoration: none; color: #333; font-weight: bold;">Developers</a>
-    </div>
-  </nav>
-  
-  <header style="background-color: #ffecb3; color: #4e342e; padding: 2rem 1rem; text-align: center;">
-    <img src="assets/img/logo.png" alt="appetAIwan Logo" class="logo" style="width: 80px; vertical-align: middle; margin-right: 1rem; background-color: #ffecb3; padding: 4px; border-radius: 8px;" />
-    <h1 style="display: inline; font-size: 2rem; vertical-align: middle;">appetAIwan Smart Meal Recommendation System</h1>
-    <p>APPETITE + AI + TAIWAN = Personalized Meal Suggestions for You</p>
-  </header>
+      // Ensure DOM is loaded before setting up event listeners
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM loaded");
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+          const modal = document.getElementById("qrModal");
+          if (event.target === modal) {
+            closeQRCode();
+          }
+        }
 
-  <section id="background" class="container section-highlight">
-    <h2>📌 Product Background</h2>
-    <p>
-      It's hard to understand nutrition info when eating out. Most recipe platforms lack personalized health-based suggestions. <strong>appetAIwan</strong> integrates AI technology with a LINE bot to recommend meals based on your health profile.
-    </p>
-    <img src="assets/img/coverpage.png" alt="Product Screenshot" class="photo-placeholder" />
-  </section>
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+            closeQRCode();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+    <section id="demo" class="container section-highlight">
+      <h2>📱 Live Demo Screenshots</h2>
+      <p class="demo-intro">
+        Experience our appetAIwan LINE Bot in action - from TDEE calculation to
+        personalized meal recommendations
+      </p>
 
-  <section id="users" class="container section-highlight">
-    <h2>👤 User Stories</h2>
-    <div class="grid grid-2">
-      <div style="text-align: center;">
-        <h3>Mary (Age 55, Hypertension)</h3>
-        <p>She wants to manage her condition through food instead of medication. After selecting "Hypertension," the system filters and recommends simple, easy-to-follow recipes.</p>
-        <img src="assets/img/Mary.png" alt="Mary Using the System" style="max-width: 200px; border-radius: 8px; margin-top: 1rem;" />
+      <div class="demo-gallery">
+        <div class="demo-item">
+          <div class="demo-image">
+            <img src="assets\img\TDEE.jpg" alt="TDEE Calculation Process" />
+          </div>
+          <h3 class="demo-title">🔥 TDEE Calculation</h3>
+          <p class="demo-description">
+            Interactive calorie calculation based on user's personal information
+            and activity level
+          </p>
+        </div>
+
+        <div class="demo-item">
+          <div class="demo-image">
+            <img
+              src="assets\img\Personalized Meal Plans.jpg"
+              alt="Meal Recommendations"
+            />
+          </div>
+          <h3 class="demo-title">🍽️ Personalized Meal Plans</h3>
+          <p class="demo-description">
+            AI-powered meal recommendations tailored to your caloric needs and
+            dietary goals
+          </p>
+        </div>
+
+        <div class="demo-item">
+          <div class="demo-image">
+            <img
+              src="assets\img\Detailed Recipes.PNG"
+              alt="Recipe Instructions"
+            />
+          </div>
+          <h3 class="demo-title">👩‍🍳 Detailed Recipes</h3>
+          <p class="demo-description">
+            Step-by-step cooking instructions with ingredients and nutritional
+            information
+          </p>
+        </div>
+
+        <div class="demo-item">
+          <div class="demo-image">
+            <img
+              src="assets\img\Nutrition Assistant.jpg"
+              alt="Bot Features Overview"
+            />
+          </div>
+          <h3 class="demo-title">🤖 Nutrition Assistant</h3>
+          <p class="demo-description">
+            Comprehensive nutrition features including TDEE calculation, recipe
+            queries, and food calorie analysis
+          </p>
+        </div>
       </div>
-      <div style="text-align: center;">
-        <h3>Ben (Age 30, Office Worker)</h3>
-        <p>Looking for quick, weight-loss-friendly recipes. After work, he uses the LINE Bot to enter his goals and receives tailored recipe recommendations with nutritional info.</p>
-        <img src="assets/img/Ben.png" alt="Ben Using the System" style="max-width: 200px; border-radius: 8px; margin-top: 1rem;" />
+
+      <div class="demo-cta">
+        <button type="button" class="demo-btn" onclick="showQRCode()">
+          🌐 Try Live Demo
+        </button>
       </div>
-    </div>
-  </section>
 
-  <section id="analysis" class="container section-highlight">
-    <h2>📊 STP & 4P Analysis</h2>
-    <p>
-      <strong>Positioning:</strong> LINE users aiming for weight or blood pressure control, who cook at home regularly or occasionally.<br />
-      <strong>Price:</strong> Basic features are free; premium features use a feature-unlock model.<br />
-      <strong>Promotion:</strong> Social media campaigns, KOL & nutritionist collaborations, QR codes at clinics/gyms/markets.<br />
-      <strong>Place:</strong> Primarily via LINE Bot; website access under development.
-    </p>
-  </section>
-
-  <section id="swot" class="container section-highlight">
-    <h2>🔍 Business Model & SWOT</h2>
-    <p>
-      <strong>Strengths:</strong> Uses LLM + RAG for intelligent recommendations; no app installation needed.<br />
-      <strong>Weaknesses:</strong> Users may not fully trust AI recommendations.<br />
-      <strong>Opportunities:</strong> Growing health-focused food market; potential for cross-industry partnerships.<br />
-      <strong>Threats:</strong> Easy to replicate; existing large health platforms present competition.
-    </p>
-  </section>
-
-  <!-- <section id="media" class="container">
-    <h2>🖼️ Suggested Image Sections</h2>
-    <ul>
-      <li><strong>Homepage banner:</strong> <img src="assets/img/banner.png" alt="Homepage Banner" class="photo-placeholder" /></li>
-      <li><strong>Recipe display:</strong> <img src="assets/img/recipe-display.png" alt="Recipe Example" class="photo-placeholder" /></li>
-      <li><strong>LINE Interaction mockup:</strong> <img src="assets/img/line-mockup.png" alt="LINE Chat UI" class="photo-placeholder" /></li>
-    </ul>
-  </section> -->
-  <section id="downloads" class="container section-highlight">
-    <h2>📄 Downloadable Files</h2>
-    <ul style="list-style: none; padding-left: 0; text-align: center;">
-      <li style="margin-bottom: 1rem;">
-        <a href="assets/files/midterm.pdf" download style="background-color: #f57c00; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: bold;">
-          📥 Download Midterm Report
-        </a>
-      </li>
-    </ul>
-  </section>
-
-  <section id="team" class="container section-highlight">
-    <h2>👨‍💻 Meet the Developers</h2>
-    <div class="grid grid-2">
-      <div class="team-card" style="display: flex; flex-direction: column; align-items: center;">
-        <img src="assets/img/dev-janet.jpg" alt="Janet Photo" class="photo-placeholder" style="max-width: 200px; border-radius: 8px; margin-bottom: 1rem;" />
-        <h3>Jia-Ci WEN (Janet)</h3>
-        <p style="text-align: center;">Graduate Student<br/>Information Management, NTPU</p>
+      <!-- QR Code Modal -->
+      <div id="qrModal" class="qr-modal">
+        <div class="qr-modal-content">
+          <span class="qr-close" onclick="closeQRCode()">&times;</span>
+          <h3>📱 Scan QR Code to Try Demo</h3>
+          <div class="qr-code-container">
+            <img
+              src="assets\img\QRCODE.png"
+              alt="QR Code for appetAIwan Demo"
+              id="qrCodeImage"
+            />
+          </div>
+          <p class="qr-description">
+            Use your mobile device to scan this QR code<br />
+            and experience appetAIwan LINE Bot directly!
+          </p>
+          <a
+            href="https://appetaiwan.github.io/"
+            target="_blank"
+            class="qr-fallback-btn"
+          >
+            🔗 Or click here to open in browser
+          </a>
+        </div>
       </div>
-      <div class="team-card" style="display: flex; flex-direction: column; align-items: center;">
-        <img src="assets/img/bob_photo.png" alt="Bob Photo" class="photo-placeholder" style="max-width: 200px; border-radius: 8px; margin-bottom: 1rem;" />
-        <h3>Hsin-Ting LU (Bob)</h3>
-        <p style="text-align: center;">Graduate Student<br/>Information Management, NTPU</p>
-      </div>
-      <div class="team-card" style="display: flex; flex-direction: column; align-items: center;">
-        <img src="assets/img/Jenny.jpg" alt="Jenny Photo" class="photo-placeholder" style="max-width: 200px; border-radius: 8px; margin-bottom: 1rem;" />
-        <h3>Chieh-Yu TIEN (Jenny)</h3>
-        <p style="text-align: center;">Graduate Student<br/>Information Management, NTPU</p>
-      </div>
-    </div>
-  </section>
-  
-  
-<br>
-<footer style="background-color: #ffecb3; color: #4e342e; text-align: center; padding: 1.5rem; font-size: 0.9rem;">
-  <p>&copy; 2025 appetAIwan Project Team | Graduate Institute of Information Management, NTPU</p>
-</footer>
+    </section>
 
-</body>
+    <section id="team" class="container section-highlight">
+      <h2>👨‍💻 Meet the Developers</h2>
+      <div class="grid grid-3">
+        <div class="team-card">
+          <div class="image-placeholder team-image">
+            <img src="assets\img\Janet.jpg" alt="描述文字" />
+          </div>
+          <h3 class="team-name">Jia-Ci WEN (Janet)</h3>
+          <p class="team-info">
+            Graduate Student<br />Information Management, NTPU
+          </p>
+          <div class="team-role team-role-green">
+            <small class="team-role-text">Product Manager</small>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="image-placeholder team-image">
+            <img src="assets\img\bob_photo.png" alt="描述文字" />
+          </div>
+          <h3 class="team-name">Hsin-Ting LU (Bob)</h3>
+          <p class="team-info">
+            Graduate Student<br />Information Management, NTPU
+          </p>
+          <div class="team-role team-role-blue">
+            <small class="team-role-text">Full-Stack Developer</small>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="image-placeholder team-image">
+            <img src="assets\img\Jenny.jpg" alt="描述文字" />
+          </div>
+          <h3 class="team-name">Chieh-Yu TIEN (Jenny)</h3>
+          <p class="team-info">
+            Graduate Student<br />Information Management, NTPU
+          </p>
+          <div class="team-role team-role-purple">
+            <small class="team-role-text">UI/UX Designer</small>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <footer>
+      <p>
+        &copy; 2025 appetAIwan Project Team | Graduate Institute of Information
+        Management, NTPU
+      </p>
+      <p class="footer-website">
+        🌐 Website:
+        <a href="https://appetaiwan.github.io/" class="footer-link"
+          >appetaiwan.github.io</a
+        >
+      </p>
+    </footer>
+  </body>
 </html>
